@@ -157,7 +157,7 @@ export const authConstants = {
 getting state
 ````````````````````````
 import {useSelector} from "react-redux";
-const products = useSelector((state) => state);
+const auth = useSelector((state) => state);
 
 
 ````````````````````````````````````````````````````````````````````````````````````````````````````````````
