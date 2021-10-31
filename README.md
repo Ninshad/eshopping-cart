@@ -165,6 +165,21 @@ import { useDispatch} from 'react-redux';
 const dispatch = useDispatch();
 
 
+INDEX.js
+```````````````````````
+
+import { Provider } from 'react-redux';
+import store from './Store'
+
+ReactDOM.render(
+  <Provider store={store} >
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  </Provider>,
+  document.getElementById('root')
+);
+
 
 ````````````````````````````````````````````````````````````````````````````````````````````````````````````
 id
