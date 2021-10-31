@@ -156,8 +156,14 @@ export const authConstants = {
 
 getting state
 ````````````````````````
-import {useSelector} from "react-redux";
+import { useSelector } from 'react-redux';
 const auth = useSelector((state) => state);
+
+dispatch action
+```````````````````````
+import { useDispatch} from 'react-redux';
+const dispatch = useDispatch();
+
 
 
 ````````````````````````````````````````````````````````````````````````````````````````````````````````````
