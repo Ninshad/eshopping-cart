@@ -247,3 +247,145 @@ const axiosInstance = axios.create({
 });
 
 export default axiosInstance;
+	
+	
+	
+	
+	
+ARRAY FILTER
+```````````````````````````````````
+	
+import React from 'react';
+
+const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
+
+function App() {
+  return (
+    <div>
+      {names.filter(name => name.includes('J')).map(filteredName => (
+        <li>
+          {filteredName}
+        li>
+      ))}
+    div>
+  );
+}
+
+export default App;
+		
+		
+*
+```````````````````````````````````
+		
+
+🆕 Beginners
+🔥 Advanced
+📝 Tutorials
+ 
+React Filter: Filtering Arrays in React (With Examples)
+By James Dietrich
+Beginner React Tutorials
+How to filter an array in React with examples.
+How can we use React to filter an array? What is filter in React? I’ll answer all of these questions plus show you some examples to get you started.
+
+What is Filter in React?
+Filtering in React is pretty much what it says it is. It’s the process of looping through an array and including or excluding elements inside that array based on a condition that you provide.
+
+The caveat here is that we’re not actually filtering using React. Filter is a JavaScript function that we can perform on an array type object. Remember, we use JavaScript to write React. None of these methods are special to React. React is just the UI library.
+
+Example 1: Filter an Array of Strings in React
+
+This first example is quite a common scenario. Picture the scene: you’re creating a search filter component to allow your users to search a list of names.
+
+Your users type into a text field to filter that array of names based on what they’re typing into that text field. It’s quite a common input element these days.
+
+Let’s start off with a hard-coded array of strings. Names that you might recognize (plus a small addition):
+
+const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
+Let’s assume that you want to only display names that include the letter ‘J’ in them.
+
+
+To do that, we use the filter function. We can perform the filter function inside of our JSX in a React component like so:
+
+App.js
+<div>
+  {names.filter(name => name.includes('J')).map(filteredName => (
+    <li>
+      {filteredName}
+    li>
+  ))}
+div>
+Let’s break down the code above.
+
+First, we define our JSX inside by opening a new curly bracket inside of a
+
+element. Then, we specify the array for which we want to perform the filter function on.
+Because we are performing a function we open up a set of parentheses. This is where we want to set our condition for the filter: in this case, if the element in the array includes the letter ‘J’.
+
+Did you know that you can chain array function in JavaScript, such as filter, map, and reduce? This can save many lines of code, although it may be difficult to understand for those new to coding.
+
+Finally, we perform another function after the filter function: the map function. This is how we can output the array elements that match the filter condition to the actual user interface inside of li tags.
+
+Let’s see the complete React component code:
+
+App.js
+import React from 'react';
+
+const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
+
+function App() {
+  return (
+    <div>
+      {names.filter(name => name.includes('J')).map(filteredName => (
+        <li>
+          {filteredName}
+        li>
+      ))}
+    div>
+  );
+}
+
+export default App;
+A quick tip that I thought worth mentioning: notice how I write the names array declaration outside of the React component? That’s because I don’t need the array to be declared each time the component re-renders (which will be a lot).
+
+Example 2: Filter an Array of Objects by Value in React
+Let’s explore how to filter an array of objects in React, based on a value inside of those objects. It’s similar to what we did previously with the array of strings, just with an extra step.
+
+Our array of names has expanded, and so I renamed the array to be named people. It now looks like this:
+
+const people = [
+  {
+    name: 'James',
+    age: 31,
+  },
+  {
+    name: 'John',
+    age: 45,
+  },
+  {
+    name: 'Paul',
+    age: 65,
+  },
+  {
+    name: 'Ringo',
+    age: 49,
+  },
+  {
+    name: 'George',
+    age: 34,
+  }
+];
+		
+	
+		
+<div>
+  {people.filter(person => person.age < 60).map(filteredPerson => (
+    <li>
+      {filteredPerson.name}
+    li>
+  ))}
+div>		
+		
+		
+		
+		
