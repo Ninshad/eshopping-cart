@@ -384,7 +384,27 @@ const people = [
       {filteredPerson.name}
     li>
   ))}
-div>		
+div>	
+	
+	    
+	    
+	    
+	    
+	    
+	   
+CHECKBOX
+``````````````````````````````````````
+	    
+const { useState } = React; // --> for inline use
+// import React, { useState } from 'react';  // --> for real project
+
+
+const App = () => {
+  const [checked, setChecked] = useState(false)
+  const handleClick = () => setChecked(!checked)
+  
+  return <input onClick={handleClick} checked={checked} type="checkbox" />
+};	   
 		
 		
 		
