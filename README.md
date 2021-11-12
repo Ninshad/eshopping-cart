@@ -382,6 +382,17 @@ const people = [
     li>
   ))}
 div>	
+	    
+	    
+	    
+Time (eg: 8 minutes ago )
+````````````````````````````````````````
+in React
+`````````
+	    
+ import moment from 'moment';
+ <Typography variant="body1">{moment(post.createdAt).fromNow()}</Typography>
+	    or <h1></h1>    
 	
 	    
 	    
